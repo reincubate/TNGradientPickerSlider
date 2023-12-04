@@ -21,7 +21,12 @@ final class TNColorInformationView: NSView {
             
         }
     }
-    
+
+    override func resignFirstResponder() -> Bool {
+        hexTextField.resignFirstResponder()
+        return super.resignFirstResponder()
+    }
+
     private var hexTextField: TNHexNumberTextField!
     private var hexLabel: NSTextField!
     

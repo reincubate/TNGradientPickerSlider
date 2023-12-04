@@ -129,8 +129,8 @@ private class TransparancyView: NSView {
         
         var alpha: CGFloat = 1.0
         context.setFillPattern(pattern, colorComponents: &alpha)
-        context.fill(dirtyRect)
-                
+        context.fill(bounds)
+
         let colors = [
             NSColor(hue: hue, saturation: 1.0, brightness: 1.0, alpha: 1.0).cgColor,
             NSColor(hue: hue, saturation: 1.0, brightness: 1.0, alpha: 0.0).cgColor
@@ -139,8 +139,8 @@ private class TransparancyView: NSView {
         let colorSpace = CGColorSpaceCreateDeviceRGB()
         guard let colorGradient = CGGradient(colorsSpace: colorSpace, colors: colors, locations: nil) else { return }
         
-        context.drawLinearGradient(colorGradient, start: CGPoint(x: dirtyRect.maxX, y: dirtyRect.maxY), end: CGPoint(x: 0, y: dirtyRect.maxY), options: CGGradientDrawingOptions())
-        
+        context.drawLinearGradient(colorGradient, start: CGPoint(x: bounds.maxX, y: bounds.maxY), end: CGPoint(x: 0, y: bounds.maxY), options: CGGradientDrawingOptions())
+
         
         layer?.cornerRadius = bounds.height / 2
         

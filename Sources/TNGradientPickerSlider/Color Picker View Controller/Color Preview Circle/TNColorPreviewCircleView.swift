@@ -21,8 +21,8 @@ final class TNColorPreviewCircleView: NSView {
         
         guard let context = NSGraphicsContext.current?.cgContext else { return }
         
-        createCheckerboardPattern(context: context, rect: dirtyRect)
-        createColorCircle(context: context, rect: dirtyRect)        
+        createCheckerboardPattern(context: context, rect: bounds)
+        createColorCircle(context: context, rect: bounds)
     }
     
     // MARK: - Public methods

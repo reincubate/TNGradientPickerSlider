@@ -36,7 +36,7 @@ final class TNSaturationBrightnessView: NSView {
         super.draw(dirtyRect)
         
         guard let context = NSGraphicsContext.current?.cgContext else { return }
-        drawSaturationBrightnessGradient(context: context, rect: dirtyRect)
+        drawSaturationBrightnessGradient(context: context, rect: bounds)
     }
     
     override func mouseDown(with event: NSEvent) {

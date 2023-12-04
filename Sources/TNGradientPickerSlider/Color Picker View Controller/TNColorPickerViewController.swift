@@ -87,10 +87,12 @@ public final class TNColorPickerViewController: NSViewController {
     
     private func setupBindings() {
         hueSliderView.onValueDidChange = { [weak self] hue in
+            self?.colorInformationView.resignFirstResponder()
             self?.didUpdateHue(hue)
         }
         
         transparancySliderView.onValueDidChange = { [weak self] alpha in
+            self?.colorInformationView.resignFirstResponder()
             self?.didUpdateAlpha(alpha)
         }
         

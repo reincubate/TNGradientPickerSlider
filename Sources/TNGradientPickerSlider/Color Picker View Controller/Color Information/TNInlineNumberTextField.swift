@@ -107,6 +107,7 @@ final class TNInlineNumberTextField: NSTextField {
         font = NSFont.systemFont(ofSize: 10.0)
         formatter = numberFormatter
         maximumNumberOfLines = 1
+        refusesFirstResponder = true
     }
     
 }

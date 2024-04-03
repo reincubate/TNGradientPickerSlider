@@ -63,7 +63,7 @@ final class TNColorInformationView: NSView {
             componentCTextField.update(value: rgba.rgb.blue * 255, invokeValueDidChanged: false)
             
         case .hsb:
-            let hsv = rgba.rgb.toHSB()
+            let hsv = rgba.rgb.toHSB(preserveHS: true)
             
             componentATextField.update(value: hsv.hue, invokeValueDidChanged: false)
             componentBTextField.update(value: hsv.saturation * 100, invokeValueDidChanged: false)

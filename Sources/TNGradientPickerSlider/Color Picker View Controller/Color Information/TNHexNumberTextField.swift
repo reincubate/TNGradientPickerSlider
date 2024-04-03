@@ -35,6 +35,7 @@ final class TNHexNumberTextField: NSTextField {
     private func setupView() {
         alignment = .center
         font = NSFont.systemFont(ofSize: 10)
+        refusesFirstResponder = true
     }
     
 }

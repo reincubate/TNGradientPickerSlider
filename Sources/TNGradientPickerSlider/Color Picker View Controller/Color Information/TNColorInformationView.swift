@@ -127,8 +127,6 @@ final class TNColorInformationView: NSView {
         setupBindings()
         
         updateLabels()
-
-        hexTextField.resignFirstResponder()
     }
     
     private func setupBindings() {

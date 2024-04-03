@@ -13,7 +13,7 @@ final class TNHueSliderView: NSView {
     /// The datasource to retrieve color information.
     weak var dataSource: TNColorPickerDataSource?
     
-    private var hue: CGFloat { dataSource?.viewWantsColorInformation().rgb.toHSB(preserveHS: true).hueNormalised ?? 0.0 }
+    private var hue: CGFloat { dataSource?.viewWantsColorInformation().rgb.toHSB().hueNormalised ?? 0.0 }
     
     /// Called when the user changes the hue from within this view.
     var onValueDidChange: ((Double) -> Void)?

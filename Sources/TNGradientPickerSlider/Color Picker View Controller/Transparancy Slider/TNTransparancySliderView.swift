@@ -47,7 +47,7 @@ final class TNTransparancySliderView: NSView {
     }
     
     func refresh() {
-        alphaView.update(hue: rgba.rgb.toHSB(preserveHS: true).hueNormalised)
+        alphaView.update(hue: rgba.rgb.toHSB().hueNormalised)
         
         updateIndicatorPosition()
     }

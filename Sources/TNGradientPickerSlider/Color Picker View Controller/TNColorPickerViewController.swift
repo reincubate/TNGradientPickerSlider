@@ -124,7 +124,7 @@ public final class TNColorPickerViewController: NSViewController {
     }
     
     private func didUpdateColorInformation(_ rgba: RGBA) {
-        self.hsb = rgba.rgb.toHSB(preserveHS: true)
+        self.hsb = rgba.rgb.toHSB()
         self.alpha = rgba.alpha
         
         updateAllComponents()

@@ -18,7 +18,7 @@ final class TNSaturationBrightnessView: NSView {
     
     private var colorIndicator: TNSliderHandleView!
     private var hsb: HSB {
-        if let hsb = dataSource?.viewWantsColorInformation().rgb.toHSB(preserveHS: true) {
+        if let hsb = dataSource?.viewWantsColorInformation().rgb.toHSB() {
             return hsb
         }
         else {

@@ -83,6 +83,8 @@ public final class TNColorPickerViewController: NSViewController {
         colorPreviewCircle.dataSource = self
         
         updateAllComponents(informDelegate: false)
+
+        view.window?.makeFirstResponder(nil)
     }
     
     private func setupBindings() {
